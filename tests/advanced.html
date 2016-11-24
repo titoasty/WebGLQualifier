@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>WebGLQualifier - basic test</title>
+    <script type="text/javascript" src="../dist/webglqualifier.min.js"></script>
+</head>
+<body>
+
+<style>
+    #console {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<div id="console">
+</div>
+
+<script>
+    // utility
+    var log = function(msg) {
+        console.log(msg);
+        document.getElementById('console').innerHTML += msg + '<br/>';
+    };
+
+    // create qualifier
+    var qualifier = new WebGLQualifier({
+        benchmarkDuration: 5,
+        qualityRange: [20, 40],
+        qualityNames: ['low', 'medium', 'high'],
+        showBenchmark: true
+    });
+
+    // launch benchmark
+    log('starting benchmark for 5 seconds...');
+    qualifier.benchmark(function(fps, qualityName, qualityValue) {
+        log('benchmark results : ' + qualityName + ' (' + qualityValue + ') / ' + fps + 'fps');
+    });
+</script>
+
+</body>
+</html>
