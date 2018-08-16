@@ -1,5 +1,5 @@
 {
-  "name": "WebGLQualifier",
+  "name": "webglqualifier",
   "version": "0.2.0",
   "description": "WebGL quality benchmarker",
   "main": "WebGLQualifier.js",
