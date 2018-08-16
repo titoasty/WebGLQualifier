@@ -60,8 +60,18 @@ new WebGLQualifier({
 
 ```
 npm install
+```
+
+# Development
+```
 gulp
 ```
+
+# Production
+```
+gulp build
+```
+Output directory is dist/
 
 # More Information
 
